@@ -11,17 +11,38 @@
 }
 
 .logo-container {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 16px;
+    padding-right: 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     min-height: 64px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 mat-toolbar,
 mat-toolbar-row {
     min-height: 64px;
     height: 64px;
+}
+
+.links-container {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding-left: 16px;
+            padding-right: 16px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            mat-icon {
+                margin-right: 16px;
+            }
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
 }
