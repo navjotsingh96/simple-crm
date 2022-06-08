@@ -13,7 +13,7 @@
 .logo-container {
     padding-left: 16px;
     padding-right: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
     min-height: 64px;
     display: flex;
     align-items: center;
@@ -41,8 +41,16 @@ mat-toolbar-row {
                 margin-right: 16px;
             }
             &:hover {
+                background-color: rgba(0, 0, 0, 0.04);
+            }
+            &:focus {
                 background-color: rgba(0, 0, 0, 0.1);
             }
         }
     }
+}
+
+.router-container {
+    padding-left: 56px;
+    padding-top: 16px;
 }

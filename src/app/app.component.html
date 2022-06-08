@@ -5,9 +5,9 @@
         </div>
         <div class="links-container">
             <ul>
-                <li>
+                <li routerLink="/" routerLinkActive="router-link-active">
                     <mat-icon>dashboard_outlined</mat-icon>Dashboard</li>
-                <li>
+                <li routerLink="/user" routerLinkActive="router-link-active">
                     <mat-icon>person_outlined</mat-icon>User</li>
             </ul>
         </div>
@@ -21,6 +21,9 @@
                 <span>Simple CRM</span>
             </mat-toolbar-row>
         </mat-toolbar>
+        <div class="router-container">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 
 </mat-drawer-container>
