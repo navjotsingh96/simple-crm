@@ -16,8 +16,8 @@ export class DialogAddUserComponent implements OnInit {
   loading = false;
   private _snackBar: any;
 
-  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>,private snackBar: MatSnackBar,
-    
+  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private snackBar: MatSnackBar,
+
     private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
@@ -26,9 +26,10 @@ export class DialogAddUserComponent implements OnInit {
     this.user.birthDate = this.birthDate.getTime();
     console.log('Current User is', this.user);
     this.loading = true;
-
+    //  to save  in FIrestroe
     this.firestore
-      .collection('user')
+      .collection('users')
+      // in Firesttore we can only save data as JSON, thatswhy one function to save as JSON
       .add(this.user.toJSON())
       .then((result: any) => {
         this.loading = false;
@@ -41,8 +42,8 @@ export class DialogAddUserComponent implements OnInit {
     this.dialogRef.close();
   }
 
-   /*  openSnackBar() {
-      this.snackBar.open('User is Added');
-    
-  } */
+  /*  openSnackBar() {
+     this.snackBar.open('User is Added');
+   
+ } */
 }
