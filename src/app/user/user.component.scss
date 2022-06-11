@@ -1,9 +1,44 @@
+mat-card {
+    padding: 0;
+}
+
 .add-user-btn {
     position: absolute;
     right: 56px;
     bottom: 56px;
 }
 
-mat-card {
-    padding-right: 20px;
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        font-weight: 500;
+        text-align: start;
+    }
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        &:first-child {
+            cursor: unset;
+            &:hover {
+                background-color: unset;
+            }
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        td {
+            padding-left: 16px;
+            height: 60px;
+        }
+        th {
+            padding-left: 16px;
+            height: 48px;
+        }
+    }
 }
