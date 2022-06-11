@@ -26,6 +26,7 @@ import { FormControl, FormsModule } from '@angular/forms';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     AppComponent,
     DashboardComponent,
     UserComponent,
-    DialogAddUserComponent
+    DialogAddUserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
