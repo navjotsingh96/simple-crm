@@ -2,6 +2,7 @@ export class User {
     firstName: string;
     lastName: string;
     birthDate: number;
+    email: string;
     street: string;
     zip: number;
     city: string;
@@ -15,20 +16,22 @@ export class User {
         this.firstName = obj ? obj.firstName : '';
         this.lastName = obj ? obj.lastName : '';
         this.birthDate = obj ? obj.birthDate : '';
+        this.email = obj ? obj.email : '';
         this.street = obj ? obj.street : '';
         this.zip = obj ? obj.zip : '';
         this.city = obj ? obj.city : '';
     }
-public toJSON(){
-    return {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        birthDate: this.birthDate,
-        street: this.street,
-        zip: this.zip,
-        city: this.city
+    public toJSON() {
+        return {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            birthDate: this.birthDate,
+            email: this.email,
+            street: this.street,
+            zip: this.zip,
+            city: this.city
 
-    };
-}
+        };
+    }
 
 }

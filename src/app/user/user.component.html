@@ -6,7 +6,7 @@
             <th>City</th>
         </tr>
         <!--forschleife for all users array-->
-        <tr *ngFor="let user of allUsers">
+        <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.customIdName ]">
             <td>{{ user.firstName }} {{ user.lastName }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.city }}</td>

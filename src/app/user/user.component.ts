@@ -19,8 +19,8 @@ export class UserComponent implements OnInit {
     // to downlaod data from Firestore
     this.firestore
       .collection('users')
-      // valueChanges whenever anything is changed in firestroe will auotmatically dowmlaoded
-      .valueChanges()
+      // valueChanges whenever anything is changed in firestroe will auotmatically dowmlaoded and idField to get id from Firestore
+      .valueChanges({idField: 'customIdName'})
       .subscribe((downloadedData) => {
         console.log('User Finsihed', downloadedData);
         this.allUsers = downloadedData;

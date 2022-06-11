@@ -42,7 +42,14 @@
         </mat-form-field>
     </div>
 
-    <!--------------------Adress Street and HausNo.------------------------->
+    <!--------------------Email.------------------------->
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>E-Mail</mat-label>
+        <input type="email" [disabled]="loading" [(ngModel)]="user.email" matInput placeholder="Email">
+        <!-- <mat-hint>Please enter a Name</mat-hint> -->
+    </mat-form-field>
+
 
     <div>
         <mat-form-field appearance="outline" class="full-width">
