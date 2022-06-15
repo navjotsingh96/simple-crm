@@ -10,6 +10,8 @@ import { User } from 'src/models/user.class';
 export class DialogEditUserComponent implements OnInit {
   loading = false;
   user: User;
+  birthDate: Date;
+
   constructor(public dialogRef: MatDialogRef<DialogEditUserComponent>) { }
 
   ngOnInit(): void {
