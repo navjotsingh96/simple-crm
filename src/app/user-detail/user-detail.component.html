@@ -1,5 +1,11 @@
 <mat-card class="user-detail-header">
+    <button mat-icon-button class="pined-right-uppper-corner" [matMenuTriggerFor]="userName">
+        <mat-icon>more_vert</mat-icon>
+      </button>
 
+    <mat-menu #userName="matMenu">
+        <button mat-menu-item (click)="editUser()">Edit</button>
+    </mat-menu>
 
     <img src="./assets/img/profile.png" alt="">
 
@@ -11,6 +17,14 @@
 
 
 <mat-card class="mt-32">
+    <button mat-icon-button class="pined-right-uppper-corner" [matMenuTriggerFor]="address">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+
+    <mat-menu #address="matMenu">
+        <button mat-menu-item (click)="editAddres()">Edit</button>
+    </mat-menu>
+
     <mat-card-title>Address</mat-card-title>
     <mat-card-content>
         {{ user.street}} <br> {{ user.zip}} {{ user.city}}
