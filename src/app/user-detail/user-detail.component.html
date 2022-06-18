@@ -2,9 +2,11 @@
     <button mat-icon-button class="pined-right-uppper-corner" [matMenuTriggerFor]="userName">
         <mat-icon>more_vert</mat-icon>
       </button>
-
+    <button mat-icon-button routerLink='user' class="pined-left-upper-corner">
+    <mat-icon>arrow_back</mat-icon>
+</button>
     <mat-menu #userName="matMenu">
-        <button mat-menu-item (click)="editUser()">Edit</button>
+        <button mat-menu-item>Edit</button>
     </mat-menu>
 
     <img src="./assets/img/profile.png" alt="">
